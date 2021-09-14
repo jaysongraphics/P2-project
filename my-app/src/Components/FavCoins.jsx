@@ -12,16 +12,13 @@ function FavCoins({setSort, sort}) {
         setFaves(favArr)    
       }
 
-
     useEffect(()=> {
         fetch(favUrl)
         .then (res => res.json())
         .then (favesData => setFaves(favesData))
     }, [])
 
-    // console.log('faves', favCards);
-    
-      return(
+    return(
         <div className="table"> 
             <table className="ui blue table">
                 <tbody>

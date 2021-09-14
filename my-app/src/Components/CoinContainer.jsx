@@ -7,7 +7,6 @@ import Chart from './Chart'
 import Space from './Space'
 import CoinDetail from './CoinDetail'
 
-
 function CoinContainer(){
     const [coins, setCoins] = useState([])
     const coinUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=25&page=1&sparkline=false"
@@ -17,14 +16,12 @@ function CoinContainer(){
     const [tog, setTog] = useState(false)
     const [detail, setDetail] = useState(true)
 
-
     useEffect(()=> {
       fetch(coinUrl)
       .then (res => res.json())
       .then (coinData => setCoins(coinData))
     }, [])
 
-    
     const filteredCoin = coins.filter(coin => {
         return (coin.name.toLowerCase().includes(search.toLowerCase()))
         ||
@@ -69,7 +66,6 @@ function CoinContainer(){
                 setSort={setSort} 
                 setDetail={setDetail} 
                 detail={detail}
-                // coins={coins}
                 />
             ):( 
             <FavCoins
@@ -78,8 +74,7 @@ function CoinContainer(){
                 />)}
             <Space 
             />
-         </main>
-         
+         </main>   
     )
 }
 

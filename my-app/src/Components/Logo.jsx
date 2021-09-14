@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from './Images/crypto_logo.png'
-// import Image from './Images/Diamond_Hands.jpeg'
 
 
 function Logo(){

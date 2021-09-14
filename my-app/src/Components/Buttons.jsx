@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-// import { Header, Image, Table, Button, Label, Icon, Menu } from 'semantic-ui-react'
-
 
 function Buttons({coin, handleFave, symbol}){
     const [favorite, setFavorite] = useState(false)
@@ -23,13 +21,9 @@ function Buttons({coin, handleFave, symbol}){
         fetch(`http://localhost:3000/fav_coins/${symbol}`, {
             method: 'DELETE',
         })
-        // removeFave(symbol)
     }
-
-    //  console.log('coins', coin);
-
-
-        return(
+    
+    return(
         <div>
             {favorite ? (
             <button 

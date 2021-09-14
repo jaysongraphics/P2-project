@@ -3,12 +3,12 @@ import Buttons from './Buttons'
 import CoinContainer from './CoinContainer'
 import Remove from './Remove'
 import CoinDetail from './CoinDetail'
-// import { Header, Image, Table, Button, Label, Icon, Menu } from 'semantic-ui-react'
 
 function Coin({coin, all, removeFave, setDetail, detail, coins}){
-    // console.log(coin);
     const [postFaves, setPostFaves] = useState([])
+
     const {id, image, name, symbol, current_price, price_change_percentage_24h, ath, atl, market_cap_rank, high_24h, low_24h, max_supply} = coin
+
     const favUrl = ('http://localhost:3000/fav_coins')
     const [conDetail, setConDetail] = useState(false)
     const [moreDetail, setMoreDetail]= useState(false)
@@ -47,11 +47,6 @@ function Coin({coin, all, removeFave, setDetail, detail, coins}){
         handleCoinDetail()
         setMoreDetail(!moreDetail)
     }
-
-    //  function handleDetail(){
-    //     handleCoinDetail()
-    //     setDetail(!detail)
-    // }
 
     return(
         <>

@@ -1,7 +1,4 @@
 import React, {useState} from 'react'
-// import { Input, Header, Image, Table, Button, Label, Icon, Menu } from 'semantic-ui-react'
-// import { NavLink, Link, Switch, Route  } from "react-router-dom"
-// import CoinContainer from './CoinContainer'
 
 function NavBar({search, setSearch, setToggle, toggle, setTog, tog}){
     const [changeState, setChangeState] = useState(false)

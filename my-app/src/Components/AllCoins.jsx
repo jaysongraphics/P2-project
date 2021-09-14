@@ -14,6 +14,8 @@ function AllCoins({coins, setSort, setDetail, detail}){
     setDetail={setDetail} detail={detail}
     />)
 
+    
+
     return(
         <div className="table"> 
             <table className="ui blue table">

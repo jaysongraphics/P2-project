@@ -7,11 +7,10 @@ function Remove({id, removeFave}){
         fetch(`http://localhost:3000/fav_coins/${id}`, {
             method: 'DELETE'
         })
-     
         removeFave(id)    
     }
-
-      return(
+    
+    return(
         <div>
             <button className="ui blue basic button"
             onClick={removeFromFave}>
